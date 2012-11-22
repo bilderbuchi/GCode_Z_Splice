@@ -1,0 +1,9 @@
+*.pyc
+*.cache
+*~
+*.gcode
+
+notes.md
+/gcode_files/
+*.sublime-project
+*.sublime-workspace
