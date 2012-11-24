@@ -7,3 +7,5 @@ notes.md
 /gcode_files/
 *.sublime-project
 *.sublime-workspace
+
+*.fbp.bak

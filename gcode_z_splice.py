@@ -2,7 +2,8 @@ import logging
 import splicer
 import argparse
 import sys
-
+import wx
+import splicer_GUI
 
 logger = logging.getLogger(__name__)
 
@@ -49,5 +50,13 @@ if len(sys.argv) > 1:
 else:
 	# No arguments have been passed. Start in GUI mode
 	logging.basicConfig(level=logging.INFO)
-	logger.warning('GUI mode. No arguments have been passed. Shutting down.')
+
+	app = wx.App(False)  # Create a new app, don't redirect stdout/stderr to a window.
+	# frame = wx.Frame(None, wx.ID_ANY, "G-code Z Splicer") # A Frame is a top-level window.
+	frame = splicer_GUI.MyFrame(None)
+	frame.Show(True)     # Show the frame.
+	app.MainLoop()
+
+	# logger.warning('GUI mode. No arguments have been passed. Shutting down.')
+	logger.info('Finished!')
 	logging.shutdown()
