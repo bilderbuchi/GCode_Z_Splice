@@ -10,8 +10,11 @@ class GCodePanel( templates.GCodePanel ):
 		templates.GCodePanel.__init__( self, parent )
 	
 	# Handlers for GCodePanel events.
-	def OnFileSelected( self, event ):
-		# TODO: Implement OnFileSelected
-		pass
+	def OnFileSelected( self, event ):		
+		myfile=open(self.filePicker.GetPath(),'r')
+		self.fileDisplay.SetValue(myfile.read())
+		myfile.close()
+		# TODO: append to list of opened gcode files
+
 	
 	

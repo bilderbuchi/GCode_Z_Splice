@@ -33,6 +33,7 @@ class GCodePanel ( wx.Panel ):
 		
 		self.z_from = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.z_from.SetMaxLength( 0 ) 
+		self.z_from.Enable( False )
 		self.z_from.SetMinSize( wx.Size( 40,-1 ) )
 		
 		Zrange_sizer.Add( self.z_from, 0, wx.ALIGN_CENTER|wx.ALL, 5 )
@@ -53,7 +54,7 @@ class GCodePanel ( wx.Panel ):
 		self.filePicker = wx.FilePickerCtrl( self, wx.ID_ANY, wx.EmptyString, u"Select a file", u"*.*", wx.DefaultPosition, wx.DefaultSize, wx.FLP_DEFAULT_STYLE )
 		GCodePanel_sizer.Add( self.filePicker, 0, wx.ALL|wx.EXPAND, 5 )
 		
-		self.fileDisplay = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		self.fileDisplay = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_MULTILINE|wx.TE_READONLY )
 		self.fileDisplay.SetMaxLength( 0 ) 
 		GCodePanel_sizer.Add( self.fileDisplay, 1, wx.ALL|wx.EXPAND, 5 )
 		
@@ -97,7 +98,7 @@ class TransitionPanel ( wx.Panel ):
 		
 		TransitionPanel_sizer.Add( self.filePicker, 0, wx.ALL|wx.EXPAND, 5 )
 		
-		self.fileDisplay = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_READONLY )
+		self.fileDisplay = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_MULTILINE|wx.TE_READONLY )
 		self.fileDisplay.SetMaxLength( 0 ) 
 		self.fileDisplay.Enable( False )
 		

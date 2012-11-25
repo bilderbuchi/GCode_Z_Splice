@@ -7,7 +7,13 @@
 * PyInstaller packaging
 * GUI for easy selection
 	- remember selected input folders
-	- preview
 	- error messages
 * make sure layers are parsed correctly, including comments
+
+
+## GUI
+* Make sure all saved values are consistent
+* Error checks all around: file opening,...
+* Implement adding panels
+* Carry over z-values between panels
 

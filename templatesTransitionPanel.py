@@ -19,7 +19,9 @@ class TransitionPanel( templates.TransitionPanel ):
 			self.fileDisplay.Disable()
 	
 	def OnFileSelected( self, event ):
-		# TODO: Implement OnFileSelected
-		pass
+		myfile=open(self.filePicker.GetPath(),'r')
+		self.fileDisplay.SetValue(myfile.read())
+		myfile.close()
+		# TODO: append to list of opened transition files		
 	
 	
