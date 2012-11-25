@@ -10,7 +10,15 @@ Created using Python, wxPython, and wxFormBuilder.
 
 Requires Python and wxPython.
 
-## Limitations
+## Usage
+
+This program can be used both with a GUI and from the command line. 
+
+If you don't supply options (i.e. `python gcode_z_splice`), the GUI will start.
+
+If you want to use the command line facilities, read the help file (`python gcode_z_splice --help`).
+
+### Limitations
 
 This is **ALPHA SOFTWARE** and not feature-complete! 
 See TODO.md

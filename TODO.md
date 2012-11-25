@@ -15,6 +15,6 @@
 ## GUI
 * Make sure all saved values are consistent
 * Error checks all around: file opening,...
-* Implement adding panels
+* Implement adding panels/files
 * Carry over z-values between panels
 
