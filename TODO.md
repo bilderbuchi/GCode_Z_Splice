@@ -9,6 +9,7 @@
 	- remember selected input folders
 	- error messages
 * make sure layers are parsed correctly, including comments
+* Add licence info to every file.
 
 
 ## GUI
